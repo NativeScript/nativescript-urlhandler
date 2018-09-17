@@ -28,8 +28,6 @@ timeout(150) {
       stage('Build') {
         sh "npm install -g nativescript"
         sh "cd publish && npm run setup-dev-env"
-        sh "cd demo && rm -rf hooks/ node_modules/ platforms/ && npm i"
-        sh "cd demo-angular && rm -rf hooks/ node_modules/ platforms/ && npm i"
       }
 
       stage('Webpack') {
